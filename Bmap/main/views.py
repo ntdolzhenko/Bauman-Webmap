@@ -7,3 +7,6 @@ def profile_view(request):
 
 def home(request):
     return render(request, 'main/home.html')
+
+def maps_view(request):
+    return render(request, 'maps/maps.html')
