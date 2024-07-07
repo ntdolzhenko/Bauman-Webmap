@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'djeym.middlewares.AjaxMiddleware',
 ]
 
 ROOT_URLCONF = 'Bmap.urls'

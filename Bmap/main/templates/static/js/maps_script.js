@@ -61,6 +61,8 @@ function init() {
         // Пункт подменю
         var submenuItem = $('<li><a href="#">' + item.name + '</a></li>'),
 
+
+
             // Создаем метку
             placemark = new ymaps.Placemark(item.center, { hintContent: item.name, balloonContentBody: item.ballonBody.join('')});
 
