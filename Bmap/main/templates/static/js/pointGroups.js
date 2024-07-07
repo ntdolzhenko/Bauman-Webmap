@@ -75,7 +75,7 @@ var groups = [
 
         {
             name: "Учебные корпуса отраслевых факультетов",
-            style: "islands#redIcon",
+            style: "islands#pinkIcon",
             items: [
                 {
                     center: [55.762738, 37.868148],
