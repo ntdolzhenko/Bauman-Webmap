@@ -2,9 +2,9 @@ ymaps.ready(init);
 
 function init() {
     // экземпляр карты
-    var myMap = new ymaps.Map("map", {
-            center: [55.769697, 37.691681],
-            zoom: 15
+    var branchMap = new ymaps.Map("map", {
+            center: [55.553616, 37.357199],
+            zoom: 8
         }, {
             searchControlProvider: 'yandex#search',
             balloonPanelMaxMapArea: Infinity
@@ -13,23 +13,27 @@ function init() {
         // Контейнер для меню.
         menu = $('<ul class="menu"></ul>');
 
-    for (var i = 0, l = groups.length; i < l; i++) {
-        createMenuGroup(groups[i]);
-    }
-
+    createMenuGroup(groups[1]);
 
     function createMenuGroup (group) {
-        // Пункт меню
-        var menuItem = $('<li><a href="#">' + group.name + '</a></li>'),
+
+        var menuItem = $('<li><a href="http://127.0.0.1:8000/maps/main_buildings">Основные учебные корпуса</a></li>');
+
+        //Добавим текущий пункт меню
+        menuItem
+            .append(
+                $('<li>' + group.name + '</li>')
+            )
+            .appendTo(menu)
 
             // Коллекция для геообъектов группы
-            collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
+        var collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
 
             // Контейнер для подменю
             submenu = $('<ul class="submenu"></ul>');
 
             // Добавляем коллекцию на карту
-        myMap.geoObjects.add(collection);
+        branchMap.geoObjects.add(collection);
 
         // Добавляем подменю
         menuItem
@@ -38,24 +42,27 @@ function init() {
             // Добавляем пункт в меню
             .appendTo(menu)
 
-            // По клику удаляем/добавляем коллекцию на карту и скрываем/отображаем подменю.
-            .find('a')
-            .bind('click', function () {
-               if (collection.getParent()) {
-                    myMap.geoObjects.remove(collection);
-                    submenu.hide();
-               }
-               else{
-                    myMap.geoObjects.add(collection);
-                    submenu.show();
-               }
-            });
-
         for (var j = 0, m = group.items.length; j < m; j++) {
             createSubMenu(group.items[j], collection, submenu);
         }
-    }
 
+        menuItem
+            //Добавим ссылки на другие группы зданий
+            .append(
+                $('<li><a href="http://127.0.0.1:8000/maps/industry_faculties">Учебные корпуса отраслевых факультетов</a></li>')
+            )
+            .append(
+                $('<li><a href="http://127.0.0.1:8000/maps/sport">Спорт</a></li>')
+            )
+            .append(
+                $('<li><a href="http://127.0.0.1:8000/maps/dorms">Общежития</a></li>')
+            )
+            .append(
+                $('<li><a href="http://127.0.0.1:8000/maps/other">Другое</a></li>')
+            )
+            // Добавляем все в меню
+            .appendTo(menu)
+    }
 
     function createSubMenu(item, collection, submenu) {
         // Пункт подменю
@@ -67,7 +74,7 @@ function init() {
         placemark.events
             // Изменение цвета метки при наведении на нее
             .add('mouseenter', function (e) {
-                e.get('target').options.set('preset', 'islands#redDotIcon');
+                e.get('target').options.set('preset', 'islands#redBookIcon');
             })
             // Возвращение цвета метки если курсор не на ней
             .add('mouseleave', function (e) {
@@ -78,7 +85,7 @@ function init() {
 //
 //            });
             .add("click", function(e){
-                myMap.setCenter(e.get('target').geometry.getCoordinates(), 17, {duration: 1000});
+                branchMap.setCenter(e.get('target').geometry.getCoordinates(), 17, {duration: 1000});
 
             });
 
@@ -93,7 +100,7 @@ function init() {
             .find('a')
             .bind('click', function () {
                 if (!placemark.balloon.isOpen()) {
-                    placemark.options.set('preset', 'islands#redDotIcon');
+                    placemark.options.set('preset', 'islands#redBookIcon');
                     placemark.balloon.open();
                 }
                 else {
@@ -109,5 +116,5 @@ function init() {
     menu.appendTo($('body'));
 
     // Выставляем масштаб карты
-    //myMap.setCenter([55.769697, 37.691681], 15, {checkZoomRange: true});
+    //branchMap.setCenter([55.769697, 37.691681], 15, {checkZoomRange: true});
 }
