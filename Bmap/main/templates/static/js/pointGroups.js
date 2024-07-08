@@ -10,7 +10,7 @@
 var groups = [
         {
             name: "Основные учебные корпуса",
-            style: "islands#blueIcon",
+            style: "islands#blueEducationIcon",
             items: [
                 {
                     center: [55.765792, 37.685530],
@@ -26,7 +26,7 @@ var groups = [
                     name: 'ГУК',
                 },
                 {
-                    center: [55.765990, 37.684560],
+                    center: [55.770914, 37.690898],
                     ballonBody: [
                         '<address>',
                         '<strong>Московский государственный технический университет имени Н.Э. Баумана, Учебно-лабораторный корпус</strong>',
@@ -239,7 +239,7 @@ var groups = [
         },
         {
             name: "Филиалы МГТУ им. Н.Э. Баумана",
-            style: "islands#blueIcon",
+            style: "islands#blueBookIcon",
             items: [
                 {
                     center: [55.927800, 37.792968],
@@ -297,7 +297,7 @@ var groups = [
         },
         {
             name: "Учебные корпуса отраслевых факультетов",
-            style: "islands#blueIcon",
+            style: "islands#blueScienceIcon",
             items: [
                 {
                     center: [55.762666, 37.868188],
@@ -355,7 +355,7 @@ var groups = [
         },
         {
             name: "Спорт",
-            style: "islands#blueIcon",
+            style: 'islands#blueSportIcon',
             items: [
                 {
                     center: [55.772392, 37.697788],
@@ -595,7 +595,7 @@ var groups = [
         },
         {
             name: "Общежития",
-            style: "islands#blueIcon",
+            style: 'islands#blueHomeIcon',
             items: [
                 {
                     center: [55.772901, 37.698908],

@@ -73,7 +73,7 @@ function init() {
         placemark.events
             // Изменение цвета метки при наведении на нее
             .add('mouseenter', function (e) {
-                e.get('target').options.set('preset', 'islands#redDotIcon');
+                e.get('target').options.set('preset', 'islands#redScienceIcon');
             })
             // Возвращение цвета метки если курсор не на ней
             .add('mouseleave', function (e) {
@@ -99,7 +99,7 @@ function init() {
             .find('a')
             .bind('click', function () {
                 if (!placemark.balloon.isOpen()) {
-                    placemark.options.set('preset', 'islands#redDotIcon');
+                    placemark.options.set('preset', 'islands#redScienceIcon');
                     placemark.balloon.open();
                 }
                 else {

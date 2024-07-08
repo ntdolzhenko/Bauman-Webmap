@@ -11,15 +11,9 @@ function init() {
         }),
 
         // Контейнер для меню.
-        menu = $('<ul class="menu"></ul>');
-
-
-
-
-
+        menu = $('<ul class="menu"></ul>')
 
     createMenuGroup(groups[0]);
-
 
     function createMenuGroup (group) {
         // Пункт меню
@@ -78,7 +72,7 @@ function init() {
         placemark.events
             // Изменение цвета метки при наведении на нее
             .add('mouseenter', function (e) {
-                e.get('target').options.set('preset', 'islands#redDotIcon');
+                e.get('target').options.set('preset', 'islands#redEducationIcon');
             })
             // Возвращение цвета метки если курсор не на ней
             .add('mouseleave', function (e) {
@@ -103,7 +97,7 @@ function init() {
             .find('a')
             .bind('click', function () {
                 if (!placemark.balloon.isOpen()) {
-                    placemark.options.set('preset', 'islands#redDotIcon');
+                    placemark.options.set('preset', 'islands#redEducationIcon');
                     placemark.balloon.open();
                 }
                 else {
