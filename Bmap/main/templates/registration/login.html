@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
                 <h2 class="text-center"><strong>Welcome back!</strong></h2>
-                <div class="form-group"><input class="form-control" type="Username" name="Username" placeholder="Username"></div>
+                <div class="form-group"><input class="form-control" type="Username" name="username" placeholder="Username"></div>
                 <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
                 <div class="form-group">
                     <div class="d-flex justify-content-between">
@@ -20,7 +24,11 @@
             <div> <a href="#" class="text-info">Forgot Password</a> </div>
         </div>
                 </div>
-                <div class="form-group"><button class="btn btn-success btn-block btn-info" type="submit">Login</button></div><a class="already" href="#">Terms of Use and Privacy Policy</a>
+                {{ form.errors }}
+                <div class="form-group"><button class="btn btn-success btn-block btn-info" type="submit">Login</button></div><div>
+              <span>Create an account?</span>
+              <a href="/register" class="text-decoration-none">SignUp</a>
+          </div>
             </form>
         </div>
     </div>
