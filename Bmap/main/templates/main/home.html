@@ -1,10 +1,33 @@
 <!-- main/templates/main/home.html -->
 <!DOCTYPE html>
-<html>
+{% load static %}
+
+<html lang="RU" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+
 <head>
-    <title>Home</title>
+    <title>BMSTU WebMap</title>
+    <link rel="stylesheet" href="{% static 'css/main_page.css'%}">
 </head>
-<body>
-    <h1>Welcome to the Home Page</h1>
+
+<body style="background-image: url('{% static 'images/main_page.jpg' %}')">
+
+<div class="header">
+    <h1>BMSTU</h1>
+    <h2>WebMap</h2>
+    <p>интерактивная карта Бауманки</p>
+</div>
+
+<p id="icons">
+    <img id="image-map" src="{% static 'images/map.png' %}" alt="Карта">
+    <img id="image-login" src="{% static 'images/login.png' %}" alt="Личный кабинет">
+    <img id="image-about" src="{% static 'images/about.png' %}" alt="О нас">
+</p>
+
+<div class="main">
+    <a id="Map" href="maps/">КАРТА</a>
+    <a id="Login" href="profile/">ЛИЧНЫЙ КАБИНЕТ</a>
+    <a id="About" href="maps/">О НАС</a>
+</div>
+
 </body>
 </html>
