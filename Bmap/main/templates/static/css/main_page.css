@@ -57,7 +57,7 @@ p {
 
 body {
     background-repeat: no-repeat;
-    background-size: 1550px 1420px;
+    background-size: cover;
 }
 
 #Map {
