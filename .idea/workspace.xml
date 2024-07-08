@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b0dfd9b-0027-42d9-83e3-178b2cad57cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bmap/Bmap/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/Bmap/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bmap/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bmap/main/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bmap/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bmap/main/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +28,12 @@
       </map>
     </option>
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.view_buildings.executor": "Run",
-    "git-widget-placeholder": "db"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.view_buildings.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;db&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Web-razrabotka\Bauman-Webmap\Bmap" />

@@ -5,6 +5,8 @@ from  django.contrib.auth.models import User
 
 class GroupBuildings(models.Model):
     name = models.CharField(max_length=100)
+    base_style = models.CharField(max_length=200, blank=True)
+    highlighted_style = models.CharField(max_length=200, blank=True)
 
 class Buildings(models.Model):
     building_group = models.ForeignKey(
