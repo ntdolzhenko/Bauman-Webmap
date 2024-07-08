@@ -2,10 +2,22 @@ from django.db import models
 
 from  django.contrib.auth.models import User
 
+
+class GroupBuildings(models.Model):
+    name = models.CharField(max_length=100)
+
 class Buildings(models.Model):
+    building_group = models.ForeignKey(
+        GroupBuildings,
+        on_delete=models.CASCADE,
+        related_name='GroupBuildings',
+        default=1)
+    short_name = models.CharField(max_length=100,default='')
     name = models.CharField(max_length=100)
     location = models.CharField(max_length=200)
-    description = models.TextField()
+    coordinate = models.TextField(blank=True, default='')
+    website = models.TextField(blank=True, default='')
+
     def str(self):
         return self.name
 
