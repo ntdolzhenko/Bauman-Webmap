@@ -19,3 +19,11 @@ def dorms_map_view(request):
     return render(request, 'maps/dorms_map.html')
 def other_map_view(request):
     return render(request, 'maps/other_map.html')
+
+
+def e_handler403(request, exception=None):
+    return render(request, '403.html')
+def e_handler404(request, exception=None):
+    return render(request, '404.html')
+def e_handler500(request, exception=None):
+    return render(request, '500.html')
