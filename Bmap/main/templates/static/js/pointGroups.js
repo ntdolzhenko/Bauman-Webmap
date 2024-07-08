@@ -1,7 +1,15 @@
 // Группы объектов
+
+// Основные учебные корпуса
+// Филиалы МГТУ им. Н.Э. Баумана
+// Учебные корпуса отраслевых факультетов
+// Спорт
+// Общежития
+// Другое
+
 var groups = [
         {
-            name: "Учебные корпуса основных факультетов",
+            name: "Основные учебные корпуса",
             style: "islands#blueIcon",
             items: [
                 {
@@ -229,9 +237,9 @@ var groups = [
 
             ]
         },
-                {
+        {
             name: "Филиалы МГТУ им. Н.Э. Баумана",
-            style: "islands#greyIcon",
+            style: "islands#blueIcon",
             items: [
                 {
                     center: [55.927800, 37.792968],
@@ -287,10 +295,9 @@ var groups = [
                 }
             ]
         },
-
         {
             name: "Учебные корпуса отраслевых факультетов",
-            style: "islands#pinkIcon",
+            style: "islands#blueIcon",
             items: [
                 {
                     center: [55.762666, 37.868188],
@@ -348,7 +355,7 @@ var groups = [
         },
         {
             name: "Спорт",
-            style: "islands#yellowIcon",
+            style: "islands#blueIcon",
             items: [
                 {
                     center: [55.772392, 37.697788],
@@ -588,7 +595,7 @@ var groups = [
         },
         {
             name: "Общежития",
-            style: "islands#greenIcon",
+            style: "islands#blueIcon",
             items: [
                 {
                     center: [55.772901, 37.698908],
@@ -737,7 +744,7 @@ var groups = [
         },
         {
             name: "Другое",
-            style: "islands#blackIcon",
+            style: "islands#blueIcon",
             items: [
                 {
                     center: [55.770905, 37.691514],
