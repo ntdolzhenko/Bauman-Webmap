@@ -14,7 +14,9 @@ body {
 
 .container {
     width: 400px;
-    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -23,6 +25,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card h4 {
@@ -43,28 +48,56 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
+    width: 100%;
 }
 
-.stats .articles, .stats .followers, .stats .rating {
-    font-size: 12px;
-    color: #a1aab9;
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.stats .number1, .stats .number2, .stats .number3 {
-    font-size: 20px;
-    font-weight: 500;
+.info-item .label {
+    font-size: 14px;
     color: #3B332E;
+    font-weight: bold;
+    width: 150px;
+}
+
+.info-item .value {
+    font-size: 14px;
+    color: #3B332E;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #3B332E;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #dfe7f1;
+    box-shadow: none;
+    outline: none;
+    height: 40px;
+    background: #f2f5f8;
 }
 
 .button {
     margin-top: 20px;
+    width: 100%;
 }
 
 .button .btn {
     padding: 10px;
     font-size: 14px;
     border-radius: 5px;
-    width: 48%;
+    width: 100%;
 }
 
 .button .btn-primary {
@@ -94,8 +127,9 @@ body {
     color: #3B332E;
     font-size: 150px;
     font-family: 'Arimo';
-    margin-left: 120px;
-    margin-top: 15%;
+    text-align: left;
+    margin-left: 135px;
+    margin-top: 230px;
     margin-bottom: -100px;
 }
 
@@ -103,32 +137,31 @@ body {
     color: #3B332E;
     font-size: 100px;
     font-family: 'Arimo';
-    margin-left: 28%;
-    margin-top: 10%;
-    margin-bottom: -2%;
+    text-align: left;
+    margin-left: 200px;
+    margin-bottom: -20px;
 }
 
 .header p {
     color: #3B332E;
-    font-size: 33px;
+    font-size: 35px;
     font-family: 'Montserrat';
-    margin-left: 14%;
-    margin-top: 1%;
-    text-align: right;
+    text-align: left;
+    margin-left: 110px;
 }
 
 .image img {
     border-radius: 50%;
 }
 
-.ml-3 {
-    margin-left: 15px;
-}
-
-.w-100 {
-    width: 100%;
+.ml-2 {
+    margin-left: .5rem;
 }
 
 .mt-5 {
     margin-top: 3rem;
+}
+
+.mb-2 {
+    margin-bottom: .5rem;
 }

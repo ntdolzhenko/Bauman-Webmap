@@ -1,7 +1,10 @@
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
-from django.conf import settings  # Use settings.AUTH_USER_MODEL to refer to the custom user model
+from django.conf import settings  
+from django.contrib.auth.models import User
+
+
 
 class GroupBuildings(models.Model):
     name = models.CharField(max_length=100)
@@ -51,6 +54,9 @@ class Favourite_Places(models.Model):
         default="Not_added"
     )
 
+
+
+
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, email, password=None, **extra_fields):
         if not email:
@@ -74,6 +80,11 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField(max_length=30, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
+
+   
+    fio = models.CharField(max_length=255, blank=True)
+    phone = models.CharField(max_length=20, blank=True)
+    group = models.CharField(max_length=20, blank=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['email']
