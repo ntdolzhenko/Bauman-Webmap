@@ -1,88 +1,118 @@
 @import "https://fonts.fontstorage.com/import/arimo.css";
 @import "https://fonts.fontstorage.com/import/montserrat.css";
-{% load static %}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    link: #3B332E;
+}
+
+@media screen and (max-width: 2500px){
+    .container {
+        width: 1400px;
+        height: 1430px;
+    }
+
+    .header {
+        width: 1400px;
+        height: 700px;
+    }
+
+    .title {
+        width: 800px;
+        text-align: center;
+    }
+
+    .gz {
+        width: 600px;
+        float: right;
+        margin-top: -50%;
+    }
+
+    .main {
+        width: 1400px;
+        height: 400px;
+    }
+
+    .icons {
+        margin-top: 10%;
+        width: 1400px;
+        height: 400px;
+        margin-bottom: -5%;
+    }
+
+    .urls {
+        width: 1400px;
+    }
+
+    .gerb {
+        width: 1400px;
+        height: 200px;
+    }
+}
 
 h1 {
     color: #3B332E;
-    font-size: 150px;
+    font-size: 155px;
     font-family: 'Arimo';
-    text-align: left;
-    margin-left: 135px;
-    margin-top: 230px;
-    margin-bottom: -100px;
+    margin-top: 35%;
+    margin-bottom: -10%;
 }
 
 h2 {
     color: #3B332E;
     font-size: 100px;
     font-family: 'Arimo';
-    text-align: left;
-    margin-left: 200px;
-    margin-bottom: -20px;
+    margin-bottom: -2%;
 }
 
 p {
     color: #3B332E;
     font-size: 35px;
     font-family: 'Montserrat';
-    text-align: left;
-    margin-left: 110px;
-}
-
-.header {
-    height: 550px;
 }
 
 #image-map {
-    width: 250px;
-    height: 250px;
-    margin-left: 130px;
+    width: 19%;
+    height: 67%;
+    margin-left: 17%;
 }
 
 #image-login {
-    width: 250px;
-    height: 250px;
-    margin-left: 130px;
+    width: 19%;
+    height: 67%;
+    margin-left: 8%;
 }
 
 #image-about {
-    width: 250px;
-    height: 250px;
-    margin-left: 130px;
+    width: 19%;
+    height: 67%;
+    margin-left: 8%;
 }
 
-.main {
-    height: 300px;
-}
-
-body {
-    background-repeat: no-repeat;
-    background-size: cover;
+#image-gerb {
+    width: 12%;
+    height: 98%;
+    margin-left: 1%;
 }
 
 #Map {
     color: #3B332E;
     font-size: 40px;
     font-family: 'Montserrat';
-    text-align: left;
-    margin-left: 297px;
-    margin-top: 200px;
+    margin-left: 22%;
 }
 
 #Login {
     color: #3B332E;
     font-size: 40px;
     font-family: 'Montserrat';
-    text-align: left;
-    margin-left: 115px;
-    margin-top: 200px;
+    margin-left: 7%;
 }
 
 #About {
     color: #3B332E;
     font-size: 40px;
     font-family: 'Montserrat';
-    text-align: left;
-    margin-left: 110px;
-    margin-top: 200px;
+    margin-left: 8%;
 }
