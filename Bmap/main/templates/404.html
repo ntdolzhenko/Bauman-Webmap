@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<html lang="RU" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
     <title>404</title>
+    <link rel="stylesheet" href="{% static 'css/exception_page.css'%}">
 </head>
-<body>
-    <h1>Упс... Похоже такой страницы не существует.</h1>
-    <strong>Вернуться на <a href="{% url 'home' %}">главную страницу.</a></strong>
+
+<body style="background-image: url('{% static 'images/exception_page.jpg' %}')">
+
+<div class="header">
+    <h2>BMSTU WebMap</h2>
+    <h1>404</h1>
+    <p><strong>Упс! Похоже такой страницы не существует...</strong></p>
+    <p>Вернуться на <a href="{% url 'home' %}">главную страницу.</a></p>
+</div>
+
+<p id="icons">
+    <img id="image-logo" src="{% static 'images/bmstu_logo.png' %}">
+</p>
+
+
 </body>
 </html>
