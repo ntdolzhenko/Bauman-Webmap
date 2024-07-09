@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <title>BMSTU WebMap - Регистрация</title>
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body style="background-image: url('{% static 'images/main_page.jpg' %}')">
+  <div class="header">
+    <h1>BMSTU</h1>
+    <h2>WebMap</h2>
+    <p>интерактивная карта Бауманки</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h4>Регистрация</h4>
+      <div class="info">
+        <span>Уже есть аккаунт?</span>
+        <a href="/login/" class="text-decoration-none">Войти</a>
+      </div>
+
+      <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Логин</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        </div>
+        <div class="input-group">
+          <label for="email">Почта</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <label for="fio">ФИО</label>
+          <input type="text" class="form-control" id="fio" name="fio" placeholder="ФИО">
+        </div>
+        <div class="input-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Телефон">
+        </div>
+        <div class="input-group">
+          <label for="group">Учебная группа</label>
+          <input type="text" class="form-control" id="group" name="group" placeholder="Учебная группа">
+        </div>
+        <div class="input-group">
+          <label for="password1">Пароль</label>
+          <input type="password" class="form-control" id="password1" name="password1" placeholder="Введите пароль">
+        </div>
+        <div class="input-group">
+          <label for="password2">Повтор пароля</label>
+          <input type="password" class="form-control" id="password2" name="password2" placeholder="Введите пароль еще раз">
+        </div>
+        {{ form.errors }}
+        <div class="input-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms" value="1">
+          <label for="terms">Согласен с условиями</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+      </form>
+      <a href="{% url 'password_reset' %}" class="text-decoration-none">Забыл пароль?</a>
+    </div>
+  </div>
+</body>
+</html>

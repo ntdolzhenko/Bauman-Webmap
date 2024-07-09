@@ -1,29 +1,46 @@
-{% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <title>BMSTU WebMap - Login</title>
+  <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
-<body>
-    <div class="register-photo">
-        <div class="form-container">
-            <div class="image-holder"></div>
-            <form method="post">
-                <h2 class="text-center"><strong>Welcome back!</strong></h2>
-                <div class="form-group"><input class="form-control" type="Username" name="Username" placeholder="Username"></div>
-                <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>
-                <div class="form-group">
-                    <div class="d-flex justify-content-between">
-            <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Remember me </label> </div>
-            <div> <a href="#" class="text-info">Forgot Password</a> </div>
+<body style="background-image: url('{% static 'images/main_page.jpg' %}')">
+  <div class="header">
+    <h1>BMSTU</h1>
+    <h2>WebMap</h2>
+    <p>интерактивная карта Бауманки</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h4>Вход</h4>
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Логин</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
         </div>
-                </div>
-                <div class="form-group"><button class="btn btn-success btn-block btn-info" type="submit">Login</button></div><a class="already" href="#">Terms of Use and Privacy Policy</a>
-            </form>
+        <div class="input-group">
+          <label for="password">Пароль</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
         </div>
+        <div class="input-group checkbox-group">
+          <input type="checkbox" id="remember" name="remember" value="1">
+          <label for="remember">Запомнить меня</label>
+        </div>
+        {{ form.errors }}
+        <button type="submit" class="btn btn-primary">Войти</button>
+      </form>
+      <div class="info">
+        <a href="{% url 'password_reset' %}" class="text-decoration-none">Забыл пароль?</a>
+        <span>Нет аккаунта?</span>
+        <a href="{% url 'register' %}" class="text-decoration-none">Зарегистрироваться</a>
+      </div>
     </div>
-    
+  </div>
 </body>
 </html>
