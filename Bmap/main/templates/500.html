@@ -1,11 +1,24 @@
+
 <!DOCTYPE html>
-<html lang="en">
+{% load static %}
+
+<html lang="RU" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="UTF-8">
     <title>500</title>
+    <link rel="stylesheet" href="{% static 'css/exception_page.css'%}">
 </head>
-<body>
-    <h1>Упс... Кажется у нас технический перерыв</h1>
-    <strong>Возвращайтесь к нам позже!</a></strong>
+
+<body style="background-image: url('{% static 'images/exception_page.jpg' %}')">
+
+<div class="main">
+    <h2>BMSTU WebMap</h2></br>
+    <h1>500</h1></br>
+    <p><strong>Упс! Кажется у нас что-то сломалось...</strong>
+        <br>Пожалуйста, перезагрузите страницу или вернитесь к нас позже.
+        <br>Наша команда уже работает над решением проблемы!
+    </p>
+</div>
+
 </body>
 </html>
