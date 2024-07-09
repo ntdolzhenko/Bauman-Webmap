@@ -13,18 +13,33 @@
     <script src="{% static 'js/pointGroups.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/dorms_map_script.js' %}" type="text/javascript"></script>
     <link rel="stylesheet" href="{% static 'css/map.css'%}">
+    <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
 
 </head>
 
 <body style="background-image: url('{% static 'images/map_page.jpg' %}')">
 
-    <div class="container">
-
-        <div class="header">
-            <h1>Карта</h1>
-        </div>
-        <div id="map"></div>
+    <div class="slideheader"></div>
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+    <div id="sidebarMenu">
+        <ul class="sidebarMenuInner">
+            <li><a href="/">ГЛАВНАЯ СТРАНИЦА</a></li>
+            <li><a href="/maps/">КАРТА</a></li>
+            <li><a href="/profile/">ЛИЧНЫЙ КАБИНЕТ</a></li>
+            <li><a href="/about/">О НАС</a></li>
+        </ul>
     </div>
+
+    <div class="header">
+        <h1>Карта</h1>
+    </div>
+    <div id="map"></div>
+
 </body>
 
 </html>
