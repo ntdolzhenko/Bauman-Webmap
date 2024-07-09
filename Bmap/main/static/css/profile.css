@@ -1,46 +1,134 @@
-body{
-    
-    background-color:#B3E5FC;
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin-top: -50px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
     border-radius: 10px;
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-
-.card{
-  width: 400px;
-  border: none;
-  border-radius: 10px;
-   
-  background-color: #fff;
+.card h4 {
+    margin-bottom: 10px;
+    font-family: 'Arimo';
+    font-size: 24px;
+    color: #3B332E;
 }
 
+.card span {
+    font-size: 14px;
+    color: #a1aab9;
+}
 
+.stats {
+    background: #f2f5f8;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
 
-.stats{
+.stats .articles, .stats .followers, .stats .rating {
+    font-size: 12px;
+    color: #a1aab9;
+}
 
-      background: #f2f5f8 !important;
+.stats .number1, .stats .number2, .stats .number3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #3B332E;
+}
 
-    color: #000 !important;
+.button {
+    margin-top: 20px;
 }
-.articles{
-  font-size:10px;
-  color: #a1aab9;
-}
-.number1{
-  font-weight:500;
-}
-.followers{
-    font-size:10px;
-  color: #a1aab9;
 
+.button .btn {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 48%;
 }
-.number2{
-  font-weight:500;
+
+.button .btn-primary {
+    background-color: #007bff;
+    border: none;
 }
-.rating{
-    font-size:10px;
-  color: #a1aab9;
+
+.button .btn-primary:hover {
+    background-color: #0056b3;
 }
-.number3{
-  font-weight:500;
+
+.button .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.button .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.header {
+    height: 550px;
+}
+
+.header h1 {
+    color: #3B332E;
+    font-size: 150px;
+    font-family: 'Arimo';
+    text-align: left;
+    margin-left: 135px;
+    margin-top: 230px;
+    margin-bottom: -100px;
+}
+
+.header h2 {
+    color: #3B332E;
+    font-size: 100px;
+    font-family: 'Arimo';
+    text-align: left;
+    margin-left: 200px;
+    margin-bottom: -20px;
+}
+
+.header p {
+    color: #3B332E;
+    font-size: 35px;
+    font-family: 'Montserrat';
+    text-align: left;
+    margin-left: 110px;
+}
+
+.image img {
+    border-radius: 50%;
+}
+
+.ml-3 {
+    margin-left: 15px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-5 {
+    margin-top: 3rem;
 }
