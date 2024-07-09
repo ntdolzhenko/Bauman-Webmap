@@ -6,6 +6,8 @@ from .views import (
     other_map_view, RegisterView, about_view
 )
 
+from .views import e_handler403, e_handler404, e_handler500
+
 urlpatterns = [
     path('', home_view, name='home'),
     path('profile/', profile_view, name='profile'),
@@ -20,3 +22,8 @@ urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
     path('about/', about_view, name='about'),
 ]
+
+handler403 = e_handler403
+handler404 = e_handler404
+handler500 = e_handler500
+

@@ -39,3 +39,9 @@ class RegisterView(FormView):
         form.save()
         return super().form_valid(form)
 
+def e_handler403(request, exception=None):
+    return render(request, '403.html')
+def e_handler404(request, exception=None):
+    return render(request, '404.html')
+def e_handler500(request, exception=None):
+    return render(request, '500.html')

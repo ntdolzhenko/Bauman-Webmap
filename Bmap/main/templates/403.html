@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="RU" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>403</title>
+    <link rel="stylesheet" href="{% static 'css/exception_page.css'%}">
+</head>
+
+<body style="background-image: url('{% static 'images/exception_page.jpg' %}')">
+
+<div class="main">
+    <h2>BMSTU WebMap</h2></br>
+    <h1>403</h1></br>
+    <p><strong>Упс! Кажется Вам сюда нельзя...</strong><br>Вернуться на <a href="{% url 'home' %}">главную страницу.</a></p>
+</div>
+
+</body>
+</html>
