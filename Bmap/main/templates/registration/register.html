@@ -1,67 +1,67 @@
-{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static '/css/register.css' %}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <script type="text/javascript" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <title>BMSTU WebMap - Регистрация</title>
+  <link rel="stylesheet" href="{% static 'css/register.css' %}">
 </head>
-<body>
-    <div class="body-background">
-   <div class="container-fluid d-flex justify-content-center align-items-center h-100">
+<body style="background-image: url('{% static 'images/main_page.jpg' %}')">
+  <div class="header">
+    <h1>BMSTU</h1>
+    <h2>WebMap</h2>
+    <p>интерактивная карта Бауманки</p>
+  </div>
 
-      <div class="card p-3 text-center py-4">
-          <h4>Create account</h4>
-          <div>
-              <span>Already have an account?</span>
-              <a href="/login/" class="text-decoration-none">Signin</a>
-          </div>
-
-          <form method="post" action="{% url 'register' %}">
-              {% csrf_token %}
-              <div class="mt-3 px-3">
-              <input class="form-control" placeholder="Username" name="username">
-          </div>
-              <div class="mt-3 px-3">
-              <input class="form-control" placeholder="Email" name="email">
-          </div>
-
-          <div class="input-group px-3 mt-3">
-              <input type="text" class="form-control" placeholder="Введите пароль" name="password1" aria-label="Username">
-              <span></span>
-              <input type="text" class="form-control" placeholder="Введите пароль еще раз" name="password2" aria-label="Server">
-          </div>
-            <div class="mt-3 d-grid px-3">
-                {{ form.errors }}
-              <button class="btn btn-primary btn-block btn-signup text-uppercase" href="{% url 'register' %}">
-                  <span>Signup</span>
-
-              </button>
-
-          </div>
-          </form>
-          <a href="{% url 'password_reset' %}" class="text-decoration-none">Password reset</a>
-
-
-
-
-          <div class="px-3">
-              <div class="mt-2 form-check d-flex flex-row">
-              <input class="form-check-input" type="checkbox" value="" id="services">
-              <label class="form-check-label ms-2" for="services">
-                I have read and agree to the terms.
-              </label>
-            </div>
-          </div>
+  <div class="container">
+    <div class="card">
+      <h4>Регистрация</h4>
+      <div class="info">
+        <span>Уже есть аккаунт?</span>
+        <a href="/login/" class="text-decoration-none">Войти</a>
       </div>
 
-   </div>
-</div>
+      <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Логин</label>
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+        </div>
+        <div class="input-group">
+          <label for="email">Почта</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+        </div>
+        <div class="input-group">
+          <label for="fio">ФИО</label>
+          <input type="text" class="form-control" id="fio" name="fio" placeholder="ФИО">
+        </div>
+        <div class="input-group">
+          <label for="phone">Телефон</label>
+          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Телефон">
+        </div>
+        <div class="input-group">
+          <label for="group">Учебная группа</label>
+          <input type="text" class="form-control" id="group" name="group" placeholder="Учебная группа">
+        </div>
+        <div class="input-group">
+          <label for="password1">Пароль</label>
+          <input type="password" class="form-control" id="password1" name="password1" placeholder="Введите пароль">
+        </div>
+        <div class="input-group">
+          <label for="password2">Повтор пароля</label>
+          <input type="password" class="form-control" id="password2" name="password2" placeholder="Введите пароль еще раз">
+        </div>
+        {{ form.errors }}
+        <div class="input-group checkbox-group">
+          <input type="checkbox" id="terms" name="terms" value="1">
+          <label for="terms">Согласен с условиями</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+      </form>
+      <a href="{% url 'password_reset' %}" class="text-decoration-none">Забыл пароль?</a>
+    </div>
+  </div>
 </body>
 </html>

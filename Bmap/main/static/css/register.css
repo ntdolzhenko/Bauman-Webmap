@@ -1,25 +1,135 @@
-.body-background{
-    height:100vh;
-    background-image:linear-gradient(to right top, #be2b45, #c9005e, #c40087, #a300bd, #0812f8);
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.card{
-    width:400px;
-    border:none;
-
+.container {
+  width: 400px;
+  margin-top: -50px;
 }
 
-.form-control{
-    height:45px;
-    border-radius:10px;
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.form-control:focus{
-    box-shadow:none;
+.card h4 {
+  margin-bottom: 20px;
+  font-family: 'Arimo';
+  font-size: 30px;
+  color: #3B332E;
 }
 
+.info {
+  margin-bottom: 20px;
+}
 
-.btn-signup{
-    height:50px;
-    border-radius:10px;
+.info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.text-decoration-none:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #3B332E;
+  font-size: 150px;
+  font-family: 'Arimo';
+  text-align: left;
+  margin-left: 135px;
+  margin-top: 230px;
+  margin-bottom: -100px;
+}
+
+h2 {
+  color: #3B332E;
+  font-size: 100px;
+  font-family: 'Arimo';
+  text-align: left;
+  margin-left: 200px;
+  margin-bottom: -20px;
+}
+
+p {
+  color: #3B332E;
+  font-size: 35px;
+  font-family: 'Montserrat';
+  text-align: left;
+  margin-left: 110px;
+}
+
+.header {
+  height: 550px;
 }
