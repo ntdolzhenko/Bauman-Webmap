@@ -7,7 +7,9 @@
     <list default="true" id="5b0dfd9b-0027-42d9-83e3-178b2cad57cb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bmap/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bmap/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Bmap/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bmap/main/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Bmap/main/templates/registration/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +33,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Python.view_buildings.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;db&quot;
+    &quot;git-widget-placeholder&quot;: &quot;registration&quot;
   }
 }</component>
   <component name="RecentsManager">
