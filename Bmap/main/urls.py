@@ -1,9 +1,9 @@
 from django.urls import path
 from django.contrib.auth import views as auth_views
 from .views import (
-    home_view, profile_view, mainBuild_map_view, branches_map_view, 
-    industry_faculties_map_view, sport_map_view, dorms_map_view, 
-    other_map_view, RegisterView
+    home_view, profile_view, mainBuild_map_view, branches_map_view,
+    industry_faculties_map_view, sport_map_view, dorms_map_view,
+    other_map_view, RegisterView, about_view
 )
 
 urlpatterns = [
@@ -18,4 +18,5 @@ urlpatterns = [
     path('maps/other', other_map_view, name='other_map'),
     path('login/', auth_views.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('register/', RegisterView.as_view(), name='register'),
+    path('about/', about_view, name='about'),
 ]

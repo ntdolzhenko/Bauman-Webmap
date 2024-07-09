@@ -12,6 +12,9 @@ def profile_view(request):
 @login_required
 def home_view(request):
     return render(request, 'main/home.html')
+
+def about_view(request):
+    return render(request, 'main/about.html')
 def mainBuild_map_view(request):
     return render(request, 'maps/main_buildings_map.html')
 def branches_map_view(request):
@@ -35,3 +38,4 @@ class RegisterView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
