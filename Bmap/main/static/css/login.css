@@ -108,9 +108,9 @@ h1 {
   font-size: 150px;
   font-family: 'Arimo';
   text-align: left;
-  margin-left: 135px;
-  margin-top: 230px;
-  margin-bottom: -100px;
+  margin-left: -20%;
+  margin-top: 15%;
+  margin-bottom: -11%;
 }
 
 h2 {
@@ -118,7 +118,7 @@ h2 {
   font-size: 100px;
   font-family: 'Arimo';
   text-align: left;
-  margin-left: 200px;
+  margin-left: -11%;
   margin-bottom: -20px;
 }
 
@@ -127,7 +127,7 @@ p {
   font-size: 35px;
   font-family: 'Montserrat';
   text-align: left;
-  margin-left: 110px;
+  margin-left: -25%;
 }
 
 .header {
