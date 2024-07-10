@@ -37,11 +37,11 @@
                         </div>
                     </div>
                     <div class="button mt-2 d-flex flex-column align-items-start">
-                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'profile_update' %}'">Update Profile</button>
-                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'password_change' %}'">Change Password</button>
+                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'profile_update' %}'">Обновить профиль</button>
+                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'password_change' %}'">Изменить пароль</button>
                         <form method="post" action="{% url 'logout' %}" class="w-100">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-sm btn-primary w-100">Logout</button>
+                            <button type="submit" class="btn btn-sm btn-primary w-100">Выйти</button>
                         </form>
                     </div>
                 </div>
