@@ -7,17 +7,20 @@ body {
     link: #3B332E;
 }
 
-@media screen and (max-width: 2500px){
-    .container {
-        width: 1400px;
-        height: 600px;
-        margin-top: -3%;
-    }
+.container {
+    width: 1400px;
+    height: 630px;
+}
 
-    .header {
-        width: 1400px;
-        height: 100px;
-    }
+.header {
+    width: 1400px;
+    height: 100px;
+    margin-bottom: -20%;
+}
+
+.main {
+    width: 1400px;
+    height: 400px;
 }
 
 #About {
@@ -25,5 +28,285 @@ body {
     font-size: 100px;
     font-family: 'Arimo';
     margin-left: 8%;
-    padding-top: 2%;
+    margin-top: 0%;
+}
+
+.photos {
+    width: 1400px;
+    height: 400px;
+    margin-bottom: -25%;
+    margin-top: 60%;
+    margin-left: 16%;
+}
+
+.info {
+    width: 1400px;
+    color: #3B332E;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    height: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#image-Katya {
+    width: 17%;
+    height: 60%;
+}
+
+#image-Anya {
+    width: 17%;
+    height: 60%;
+}
+
+#image-Nastya {
+    width: 17%;
+    height: 60%;
+}
+
+#image-Yarik {
+    width: 17%;
+    height: 60%;
+}
+
+.Katya {
+    width: 250px;
+    height: 100px;
+    margin-left: 6.5%;
+}
+
+.Anya {
+    width: 250px;
+    height: 100px;
+    margin-left: 24%;
+    margin-top: -6%;
+}
+
+.Nastya {
+    width: 250px;
+    height: 100px;
+    margin-left: 41%;
+    margin-top: -8.5%;
+}
+
+.Yarik {
+    width: 250px;
+    height: 100px;
+    margin-left: 58.5%;
+    margin-top: -6%;
+}
+
+
+
+@media (orientation: portrait) {
+
+    body {
+        width: 300px;
+        height: 800px;
+    }
+
+    .container {
+        width: 300px;
+        height: 800px;
+    }
+
+    .header {
+        width: 300px;
+        height: 50px;
+    }
+
+    .main {
+        width: 300px;
+        height: 100px;
+        margin-top: -60%;
+    }
+
+    #About {
+        font-size: 50px;
+        margin-left: 13%;
+        margin-top: 10%;
+    }
+
+    .photos {
+        width: 300px;
+        height: 400px;
+        margin-bottom: -25%;
+        margin-top: 60%;
+        margin-left: 16%;
+    }
+
+    .info {
+        width: 100px;
+        font-size: 17px;
+        height: 200px;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    #image-Katya {
+        width: 48%;
+        height: 35%;
+        margin-top: -200%;
+        margin-left: -5%;
+    }
+
+    #image-Anya {
+        width: 48%;
+        height: 35%;
+        margin-top: 20%;
+    }
+
+    #image-Nastya {
+        width: 48%;
+        height: 35%;
+    }
+
+    #image-Yarik {
+        width: 48%;
+        height: 35%;
+    }
+
+    .Katya {
+        width: 250px;
+        height: 100px;
+        margin-left: 6.5%;
+        margin-top: ;
+    }
+
+    .Anya {
+        width: 250px;
+        height: 100px;
+        margin-left: 24%;
+        margin-top: -6%;
+    }
+
+    .Nastya {
+        width: 250px;
+        height: 100px;
+        margin-left: 41%;
+        margin-top: -8.5%;
+    }
+
+    .Yarik {
+        width: 250px;
+        height: 100px;
+        margin-left: 58.5%;
+        margin-top: -6%;
+    }
+}
+
+@media (orientation: landscape) {
+    .main {
+        margin-top: -10%;
+        width: 600px;
+        height: 100px;
+    }
+
+    .icons {
+        margin-bottom: -12%;
+    }
+}
+
+@media (min-width: 600px) AND (max-width: 900px) {
+
+    body {
+        width: 300px;
+        height: 550px;
+    }
+
+    .container {
+        width: 300px;
+        height: 100px;
+    }
+
+    .header {
+        width: 600px;
+        height: 250px;
+        margin-bottom: -60%;
+    }
+
+    .title {
+        width: 600px;
+    }
+
+    .main {
+        width: 300px;
+        height: 100px;
+    }
+
+    #About {
+        font-size: 50px;
+        margin-left: 8%;
+        margin-top: 0%;
+    }
+
+    .photos {
+        width: 300px;
+        height: 400px;
+        margin-bottom: -25%;
+        margin-top: 0%;
+        margin-left: 16%;
+    }
+
+    .info {
+        width: 100px;
+        font-size: 17px;
+        height: 200px;
+        text-align: center;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    #image-Katya {
+        width: 48%;
+        height: 35%;
+        margin-top: -200%;
+        margin-left: -5%;
+    }
+
+    #image-Anya {
+        width: 48%;
+        height: 35%;
+        margin-top: 20%;
+    }
+
+    #image-Nastya {
+        width: 48%;
+        height: 35%;
+    }
+
+    #image-Yarik {
+        width: 48%;
+        height: 35%;
+    }
+
+    .Katya {
+        width: 250px;
+        height: 100px;
+        margin-left: 6.5%;
+        margin-top: ;
+    }
+
+    .Anya {
+        width: 250px;
+        height: 100px;
+        margin-left: 24%;
+        margin-top: -6%;
+    }
+
+    .Nastya {
+        width: 250px;
+        height: 100px;
+        margin-left: 41%;
+        margin-top: -8.5%;
+    }
+
+    .Yarik {
+        width: 250px;
+        height: 100px;
+        margin-left: 58.5%;
+        margin-top: -6%;
+    }
+
 }

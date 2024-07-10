@@ -122,20 +122,20 @@ a {
     }
 
     #map {
-        width: 60%;
+        width: 50%;
         height: 80%;
         position: absolute;
         left: 30%;
-        margin-left: 8%;
+        margin-left: 13%;
         margin-top: -10%;
     }
 
     .menu {
         list-style: none;
         padding: 5px;
-        margin-top: 4%;
+        margin-top: -2%;
         font-size: 22px;
-        margin-left: 4%;
+        margin-left: 7%;
     }
 
     .submenu li {
@@ -143,7 +143,7 @@ a {
     }
 }
 
-@media (min-width: 745px) AND (max-width: 1252px) {
+@media (min-width: 600px) AND (max-width: 1252px) {
 
     html, body {
         width: 1000px;
@@ -176,7 +176,7 @@ a {
     #map {
         width: 60%;
         height: 60%;
-        margin-top: 30%;
+        margin-top: 40%;
         margin-left: -25%;
 
     }

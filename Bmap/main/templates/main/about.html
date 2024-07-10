@@ -7,6 +7,7 @@
     <title>BMSTU WebMap</title>
     <link rel="stylesheet" href="{% static 'css/about.css'%}">
     <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body style="background-image: url('{% static 'images/about_page.jpg' %}')">
@@ -34,9 +35,42 @@
         </div>
 
         <div class="main">
-            <p id="info">
 
-            </p>
+            <div class="photos">
+                <img id="image-Katya" src="{% static 'images/Katya.jpg' %}" alt="Екатерина">
+                <img id="image-Anya" src="{% static 'images/Anya.jpg' %}" alt="Анна">
+                <img id="image-Nastya" src="{% static 'images/Nastya.jpg' %}" alt="Анастасия">
+                <img id="image-Yarik" src="{% static 'images/Yarik.jpg' %}" alt="Ярослав">
+            </div>
+
+            <div class="info">
+
+                <div class="Katya">
+                    Больгина Екатерина
+                    БМТ1-63Б
+                    Fullstack
+                </div>
+
+                <div class="Anya">
+                    Бондарева Анна
+                    ФН4-42Б
+                    Front-end
+                </div>
+
+                <div class="Nastya">
+                    Должненко Анастасия
+                    РК6-42Б
+                    Back-end
+                </div>
+
+                <div class="Yarik">
+                    Боровиков Ярослав
+                    БМТ1-63Б
+                    Back-end
+                </div>
+
+            </div>
+
         </div>
 
 

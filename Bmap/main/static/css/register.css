@@ -188,7 +188,7 @@ p {
     }
 }
 
-@media (min-width: 670px) AND (max-width: 1252px) {
+@media (min-width: 600px) AND (max-width: 1252px) {
 
     html, body {
         width: 1000px;

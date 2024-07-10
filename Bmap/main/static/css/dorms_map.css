@@ -121,23 +121,61 @@ a {
     }
 
     #map {
-        width: 60%;
+        width: 50%;
         height: 80%;
         position: absolute;
         left: 30%;
-        margin-left: 8%;
+        margin-left: 13%;
         margin-top: -10%;
     }
 
     .menu {
         list-style: none;
         padding: 5px;
-        margin-top: -4%;
+        margin-top: -2%;
         font-size: 22px;
-        margin-left: 4%;
+        margin-left: 7%;
     }
 
     .submenu li {
         font-size: 17px;
+    }
+}
+
+@media (min-width: 600px) AND (max-width: 1252px) {
+    html, body {
+        width: 800px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 5px;
+        margin-top: 0%;
+        font-size: 20px;
+        margin-left: 10%;
+        width: 300px;
+    }
+
+    .submenu li {
+        font-size: 17px;
+        color: #3B332E;
+        margin-left: 10%;
+    }
+
+    h1 {
+        font-size: 55px;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+    #map {
+        width: 80%;
+        height: 60%;
+        margin-top: 60%;
+        margin-left: -20%;
+
     }
 }
