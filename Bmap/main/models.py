@@ -1,15 +1,15 @@
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
-from django.conf import settings  
+from django.conf import settings
 from django.contrib.auth.models import User
-
 
 
 class GroupBuildings(models.Model):
     name = models.CharField(max_length=100)
     base_style = models.CharField(max_length=200, blank=True)
     highlighted_style = models.CharField(max_length=200, blank=True)
+
 
 class Buildings(models.Model):
     building_group = models.ForeignKey(
@@ -26,6 +26,7 @@ class Buildings(models.Model):
     def __str__(self):
         return self.name
 
+
 class BuildingsImage(models.Model):
     Building = models.ForeignKey(
         Buildings,
@@ -34,6 +35,7 @@ class BuildingsImage(models.Model):
     )
     image = models.ImageField(upload_to='building_photos/')  # Create this folder to store photos
     description = models.CharField(max_length=255, blank=True)
+
 
 class Favourite_Places(models.Model):
     STATUS_CHOICES = [
@@ -55,8 +57,6 @@ class Favourite_Places(models.Model):
     )
 
 
-
-
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, email, password=None, **extra_fields):
         if not email:
@@ -72,6 +72,7 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault('is_superuser', True)
 
         return self.create_user(username, email, password, **extra_fields)
+
 
 class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=150, unique=True)

@@ -1,68 +1,47 @@
-<!DOCTYPE html>
+<!-- templates/main/profile.html -->
 {% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
 </head>
 <body style="background-image: url('{% static 'images/main_page.jpg' %}')">
-
-    <div class="slideheader"></div>
-        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-        <label for="openSidebarMenu" class="sidebarIconToggle" style="position: fixed">
-            <div class="spinner diagonal part-1"></div>
-            <div class="spinner horizontal"></div>
-            <div class="spinner diagonal part-2"></div>
-        </label>
-    <div id="sidebarMenu">
-        <ul class="sidebarMenuInner">
-            <li><a href="/">ГЛАВНАЯ СТРАНИЦА</a></li>
-            <li><a href="/maps/">КАРТА</a></li>
-            <li><a href="/profile/">ЛИЧНЫЙ КАБИНЕТ</a></li>
-            <li><a href="/about/">О НАС</a></li>
-        </ul>
-    </div>
-
-    <div class="header">
-        <h1>BMSTU</h1>
-        <h2>WebMap</h2>
-        <p>интерактивная карта Бауманки</p>
-    </div>
-
-    <div class="container mt-5 d-flex justify-content-center">
+    <div class="container mt-5 d-flex justify-content-center align-items-center">
         <div class="card p-3">
-            <div class="d-flex align-items-center">
-                <div class="image">
-                    <img src="{% static 'images/avatar.png' %}" class="rounded" width="155">
+            <div class="d-flex align-items-center flex-column">
+                <div class="image mb-3">
+                    <img src="https://cdn-icons-png.flaticon.com/128/7236/7236095.png" class="rounded" width="155">
                 </div>
-                <div class="ml-3 w-100">
+                <div class="w-100 text-left">
                     <h4 class="mb-0 mt-0">{{ user.username }}</h4>
-                    <span>Senior Journalist</span>
-                    <div class="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
-                        <div class="d-flex flex-column">
-                            <span class="articles">Articles</span>
-                            <span class="number1">38</span>
+                    <span>{{ user.email }}</span>
+                    <div class="p-2 mt-2 bg-primary text-white stats">
+                        <div class="info-item">
+                            <span class="label">Имя:</span>
+                            <span class="value">{{ user.first_name }}</span>
                         </div>
-                        <div class="d-flex flex-column">
-                            <span class="followers">Followers</span>
-                            <span class="number2">980</span>
+                        <div class="info-item">
+                            <span class="label">Фамилия:</span>
+                            <span class="value">{{ user.last_name }}</span>
                         </div>
-                        <div class="d-flex flex-column">
-                            <span class="rating">Rating</span>
-                            <span class="number3">8.9</span>
+                        <div class="info-item">
+                            <span class="label">Телефон:</span>
+                            <span class="value">{{ user.phone }}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Учебная группа:</span>
+                            <span class="value">{{ user.group }}</span>
                         </div>
                     </div>
-                    <div class="button mt-2 d-flex flex-row align-items-center">
-                        <button class="btn btn-sm btn-outline-primary w-100" onclick="location.href='{% url 'password_change' %}'">Change password</button>
-                        <form method="post" action="{% url 'logout' %}" class="w-100 ml-2">
+                    <div class="button mt-2 d-flex flex-column align-items-start">
+                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'profile_update' %}'">Обновить профиль</button>
+                        <button class="btn btn-sm btn-outline-primary w-100 mb-2" onclick="location.href='{% url 'password_change' %}'">Изменить пароль</button>
+                        <form method="post" action="{% url 'logout' %}" class="w-100">
                             {% csrf_token %}
-                            <input type="hidden" name="next" value="{% url 'login' %}">
-                            <button type="submit" class="btn btn-sm btn-primary w-100">Logout</button>
+                            <button type="submit" class="btn btn-sm btn-primary w-100">Выйти</button>
                         </form>
                     </div>
                 </div>
