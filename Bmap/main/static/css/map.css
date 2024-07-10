@@ -55,6 +55,7 @@ a {
 }
 
 @media (orientation: portrait) {
+
     html, body {
         width: 800px;
         padding: 10px;
@@ -139,5 +140,44 @@ a {
 
     .submenu li {
         font-size: 17px;
+    }
+}
+
+@media (min-width: 745px) AND (max-width: 1252px) {
+
+    html, body {
+        width: 1000px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .menu {
+        list-style: none;
+        padding: 5px;
+        margin-top: 2%;
+        font-size: 20px;
+        margin-left: 10%;
+        width: 300px;
+    }
+
+    .submenu li {
+        font-size: 17px;
+        color: #3B332E;
+        margin-left: 5%;
+    }
+
+    h1 {
+        font-size: 55px;
+        margin-top: 3%;
+        margin-left: 5%;
+    }
+
+    #map {
+        width: 60%;
+        height: 60%;
+        margin-top: 30%;
+        margin-left: -25%;
+
     }
 }
