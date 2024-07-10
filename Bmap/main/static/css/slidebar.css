@@ -29,13 +29,13 @@
 
 #sidebarMenu {
     height: 100%;
-    position: fixed;
-    left: 0;
     width: 250px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
     background: #3B332E;
-    margin-top: -2%;
+    position: fixed;
+    left: 0%;
+    top: 0%;
 }
 
 .sidebarMenuInner {
@@ -100,34 +100,4 @@ input[type=checkbox] {
     width: 100%;
     background-color: #000000;
     margin: 2px 0;
-}
-
-@media (orientation: portrait) {
-
-    #sidebarMenu {
-        height: 100%;
-        position: fixed;
-        left: 0;
-        width: 250px;
-        transform: translateX(-250px);
-        transition: transform 250ms ease-in-out;
-        background: #3B332E;
-        margin-top: -6%;
-    }
-
-}
-
-@media (min-width: 745px) AND (max-width: 1252px) {
-
-    #sidebarMenu {
-        height: 100%;
-        position: fixed;
-        left: 0;
-        width: 250px;
-        transform: translateX(-250px);
-        transition: transform 250ms ease-in-out;
-        background: #3B332E;
-        margin-top: -6%;
-    }
-
 }

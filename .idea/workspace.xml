@@ -43,8 +43,8 @@
   "keyToString": {
     "Python.view_buildings.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
-    "last_opened_file_path": "C:/Users/milab/Bauman-Webmap/Bmap/main/static/css",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/milab/Bauman-Webmap",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -84,6 +84,7 @@
       <workItem from="1720617095444" duration="59000" />
       <workItem from="1720617162804" duration="1845000" />
       <workItem from="1720619085581" duration="1326000" />
+      <workItem from="1720620891846" duration="3236000" />
     </task>
     <servers />
   </component>

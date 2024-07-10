@@ -112,109 +112,6 @@ p {
     margin-left: 8%;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-
-.slideheader {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 100%;
-    box-shadow: none;
-    position: fixed;
-    height: 20px !important;
-    overflow: hidden;
-    z-index: 10;
-}
-
-.mainInner {
-    display: table;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-
-.mainInner div {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 3em;
-    font-weight: bold;
-    letter-spacing: 1.25px;
-}
-
-#sidebarMenu {
-    height: 100%;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    transform: translateX(-250px);
-    transition: transform 250ms ease-in-out;
-    background: #3B332E;
-    margin-top: -14%;
-}
-
-.sidebarMenuInner {
-    padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.10);
-    margin-top: 10%;
-}
-
-.sidebarMenuInner li {
-    list-style: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-family: 'Montserrat';
-    padding: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-    text-align: center;
-    margin-top: 10%;
-}
-
-.sidebarMenuInner li span {
-    display: block;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.50);
-}
-
-.sidebarMenuInner li a {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-input[type="checkbox"]:checked~#sidebarMenu {
-    transform: translateX(0);
-}
-
-input[type=checkbox] {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    display: none;
-}
-
-.sidebarIconToggle {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: absolute;
-    z-index: 99;
-    top: 22px;
-    left: 15px;
-    height: 22px;
-    width: 22px;
-}
-
-.spinner {
-    transition: all 0.3s;
-    box-sizing: border-box;
-    position: relative;
-    height: 3px;
-    width: 100%;
-    background-color: #000000;
-    margin: 2px 0;
-}
 
 @media (orientation: portrait) {
 
@@ -279,10 +176,6 @@ input[type=checkbox] {
         margin-left: -20%;
     }
 
-    .slideheader {
-        width: 300px;
-    }
-
     #image-map {
         width: 12%;
         height: 70%;
@@ -326,17 +219,6 @@ input[type=checkbox] {
         font-size: 15px;
         font-family: 'Montserrat';
         margin-left: 3%;
-    }
-
-    #sidebarMenu {
-        height: 550px;
-        position: fixed;
-        left: 0;
-        width: 250px;
-        transform: translateX(-250px);
-        transition: transform 250ms ease-in-out;
-        background: #3B332E;
-        margin-top: -14%;
     }
 
 }
@@ -416,10 +298,6 @@ input[type=checkbox] {
         margin-left: -20%;
     }
 
-    .slideheader {
-        width: 300px;
-    }
-
     #image-map {
         width: 12%;
         height: 70%;
@@ -465,15 +343,5 @@ input[type=checkbox] {
         margin-left: 3%;
     }
 
-    #sidebarMenu {
-        height: 550px;
-        position: fixed;
-        left: 0;
-        width: 250px;
-        transform: translateX(-250px);
-        transition: transform 250ms ease-in-out;
-        background: #3B332E;
-        margin-top: -14%;
-    }
 
 }
