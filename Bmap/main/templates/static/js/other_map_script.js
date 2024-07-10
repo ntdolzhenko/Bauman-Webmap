@@ -13,9 +13,9 @@ function init() {
         // Контейнер для меню.
         menu = $('<ul class="menu"></ul>');
 
-    createMenuGroup(groups[5]);
+    createMenuGroup(group, items);
 
-    function createMenuGroup (group) {
+    function createMenuGroup (group, items) {
         // Пункт меню
         var menuItem = $('<li><a href="http://127.0.0.1:8000/maps/main_buildings">Основные учебные корпуса</a></li>');
 
@@ -38,7 +38,7 @@ function init() {
             .appendTo(menu)
 
             // Коллекция для геообъектов группы
-        var collection = new ymaps.GeoObjectCollection(null, { preset: group.style }),
+        var collection = new ymaps.GeoObjectCollection(null, { preset: group.base_style }),
 
             // Контейнер для подменю
             submenu = $('<ul class="submenu"></ul>');
@@ -53,22 +53,33 @@ function init() {
             // Добавляем пункт в меню
             .appendTo(menu)
 
-        for (var j = 0, m = group.items.length; j < m; j++) {
-            createSubMenu(group.items[j], collection, submenu);
+        for (var j = 0, m = items.length; j < m; j++) {
+            createSubMenu(items[j], collection, submenu, group);
         }
     }
 
-    function createSubMenu(item, collection, submenu) {
+    function createSubMenu(item, collection, submenu, group) {
         // Пункт подменю
         var submenuItem = $('<li><a href="#">' + item.name + '</a></li>'),
 
+            ballonBody = [
+                '<address>',
+                '<strong>' + item.name + '</strong>',
+                '<br/>',
+                'Адрес: ' + item.location ,
+                '<br/>',
+                'Подробнее: <a href="' + item.website + '</a>',
+            ].join(''),
+
+            center = item.center.split(', '),
+
             // Создаем метку
-            placemark = new ymaps.Placemark(item.center, { hintContent: item.name, balloonContentBody: item.ballonBody.join('')});
+            placemark = new ymaps.Placemark([Number(center[0]), Number(center[1])], { hintContent: item.name, balloonContentBody: item.ballonBody.join('')});
 
         placemark.events
             // Изменение цвета метки при наведении на нее
             .add('mouseenter', function (e) {
-                e.get('target').options.set('preset', 'islands#redDotIcon');
+                e.get('target').options.set('preset', group.highlighted_style);
             })
             // Возвращение цвета метки если курсор не на ней
             .add('mouseleave', function (e) {
@@ -93,7 +104,7 @@ function init() {
             .find('a')
             .bind('click', function () {
                 if (!placemark.balloon.isOpen()) {
-                    placemark.options.set('preset', 'islands#redDotIcon');
+                    placemark.options.set('preset', group.highlighted_style);
                     placemark.balloon.open();
                 }
                 else {
