@@ -1,0 +1,498 @@
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    link: #3B332E;
+}
+
+.container {
+    width: 1400px;
+    height: 1030px;
+    margin-top: -5%;
+}
+
+.header {
+    width: 1400px;
+    height: 700px;
+}
+
+.title {
+    width: 800px;
+    text-align: center;
+}
+
+.gz {
+    width: 550px;
+    float: right;
+    margin-top: -50%;
+}
+
+.main {
+    width: 1400px;
+    height: 400px;
+}
+
+.icons {
+    margin-top: 10%;
+    width: 1400px;
+    height: 400px;
+    margin-bottom: -5%;
+}
+
+.urls {
+    width: 1400px;
+}
+
+.gerb {
+    width: 1400px;
+    height: 200px;
+}
+
+h1 {
+    color: #3B332E;
+    font-size: 155px;
+    font-family: 'Arimo';
+    margin-top: 35%;
+    margin-bottom: -10%;
+}
+
+h2 {
+    color: #3B332E;
+    font-size: 100px;
+    font-family: 'Arimo';
+    margin-bottom: -2%;
+}
+
+p {
+    color: #3B332E;
+    font-size: 35px;
+    font-family: 'Montserrat';
+}
+
+#image-map {
+    width: 19%;
+    height: 67%;
+    margin-left: 17%;
+}
+
+#image-login {
+    width: 19%;
+    height: 67%;
+    margin-left: 8%;
+}
+
+#image-about {
+    width: 19%;
+    height: 67%;
+    margin-left: 8%;
+}
+
+#image-gerb {
+    width: 12%;
+    height: 98%;
+    margin-left: 1%;
+}
+
+#Map {
+    color: #3B332E;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    margin-left: 22%;
+}
+
+#Login {
+    color: #3B332E;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    margin-left: 7%;
+}
+
+#About {
+    color: #3B332E;
+    font-size: 40px;
+    font-family: 'Montserrat';
+    margin-left: 8%;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+.slideheader {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    position: fixed;
+    height: 20px !important;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.mainInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.mainInner div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: #3B332E;
+    margin-top: -14%;
+}
+
+.sidebarMenuInner {
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+    margin-top: 10%;
+}
+
+.sidebarMenuInner li {
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    text-align: center;
+    margin-top: 10%;
+}
+
+.sidebarMenuInner li span {
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input[type="checkbox"]:checked~#sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    height: 3px;
+    width: 100%;
+    background-color: #000000;
+    margin: 2px 0;
+}
+
+@media (orientation: portrait) {
+
+    body {
+        width: 600px;
+        height: 700px;
+    }
+
+    .container {
+        width: 600px;
+        height: 700px;
+    }
+
+    .header {
+        width: 600px;
+        height: 250px;
+    }
+
+.   title {
+        width: 600px;
+        text-align: center;
+    }
+
+    .gz {
+        width: 600px;
+        margin-top: 4%;
+        margin-left: -10%;
+    }
+
+    #image-gz {
+        width: 50%;
+        height: 20%;
+        margin-left: 4%;
+    }
+
+    .main {
+        width: 600px;
+        height: 100px;
+    }
+
+    .icons {
+        margin-top: 55%;
+        width: 600px;
+        height: 100px;
+        margin-bottom: -4%;
+        margin-left: -12%;
+    }
+
+    .urls {
+        width: 600px;
+        margin-left: -22%;
+    }
+
+    .gerb {
+        width: 600px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 90px;
+        margin-top: 9%;
+        margin-left: -55%;
+        margin-bottom: -7%;
+    }
+
+    h2 {
+        font-size: 67px;
+        margin-bottom: -1%;
+        margin-left: -54%;
+    }
+
+    p {
+        font-size: 20px;
+        margin-left: -56%;
+    }
+
+    #image-map {
+        width: 12%;
+        height: 70%;
+        margin-left: 14%;
+    }
+
+    #image-login {
+        width: 12%;
+        height: 70%;
+        margin-left: 8%;
+    }
+
+    #image-about {
+        width: 12%;
+        height: 70%;
+    }
+
+    #image-gerb {
+        width: 8%;
+        height: 56%;
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+
+    #Map {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 26%;
+    }
+
+    #Login {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 3%;
+    }
+
+    #About {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 3%;
+    }
+
+    #sidebarMenu {
+        height: 700px;
+        position: fixed;
+        left: 0;
+        width: 250px;
+        transform: translateX(-250px);
+        transition: transform 250ms ease-in-out;
+        background: #3B332E;
+        margin-top: -14%;
+    }
+
+}
+
+@media (orientation: landscape) {
+    .main {
+        margin-top: -10%;
+        width: 600px;
+        height: 100px;
+    }
+
+    .icons {
+        margin-bottom: -12%;
+    }
+}
+
+@media (min-width: 745px) AND (max-width: 900px) {
+
+    body {
+        width: 600px;
+        height: 700px;
+    }
+
+    .container {
+        width: 600px;
+        height: 700px;
+    }
+
+    .header {
+        width: 600px;
+        height: 250px;
+    }
+
+.   title {
+        width: 600px;
+        text-align: center;
+    }
+
+    .gz {
+        width: 600px;
+        margin-top: 4%;
+        margin-left: -10%;
+        margin-bottom: 16%;
+    }
+
+    #image-gz {
+        width: 50%;
+        height: 20%;
+        margin-left: 4%;
+    }
+
+    .main {
+        width: 600px;
+        height: 100px;
+    }
+
+    .icons {
+        margin-top: 55%;
+        width: 600px;
+        height: 100px;
+        margin-bottom: 16%;
+        margin-left: -12%;
+    }
+
+    .urls {
+        width: 600px;
+        margin-left: -23%;
+    }
+
+    .gerb {
+        width: 600px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 90px;
+        margin-top: 9%;
+        margin-left: -55%;
+        margin-bottom: -7%;
+    }
+
+    h2 {
+        font-size: 67px;
+        margin-bottom: -1%;
+        margin-left: -54%;
+    }
+
+    p {
+        font-size: 20px;
+        margin-left: -56%;
+    }
+
+    #image-map {
+        width: 12%;
+        height: 70%;
+        margin-left: 14%;
+    }
+
+    #image-login {
+        width: 12%;
+        height: 70%;
+        margin-left: 8%;
+    }
+
+    #image-about {
+        width: 12%;
+        height: 70%;
+    }
+
+    #image-gerb {
+        width: 8%;
+        height: 56%;
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+
+    #Map {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 26%;
+    }
+
+    #Login {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 3%;
+    }
+
+    #About {
+        color: #3B332E;
+        font-size: 15px;
+        font-family: 'Montserrat';
+        margin-left: 3%;
+    }
+
+    #sidebarMenu {
+    height: 700px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background: #3B332E;
+    margin-top: -14%;
+}

@@ -1,63 +1,40 @@
+@ -1,38 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% load static %}
-  <title>BMSTU WebMap - Login</title>
-  <link rel="stylesheet" href="{% static 'css/login.css' %}">
-  <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <title>BMSTU WebMap - Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 </head>
 <body style="background-image: url('{% static 'images/main_page.jpg' %}')">
-
-  <div class="slideheader"></div>
-  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-  <label for="openSidebarMenu" class="sidebarIconToggle">
-    <div class="spinner diagonal part-1"></div>
-    <div class="spinner horizontal"></div>
-    <div class="spinner diagonal part-2"></div>
-  </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li><a href="/">ГЛАВНАЯ СТРАНИЦА</a></li>
-      <li><a href="/maps/">КАРТА</a></li>
-      <li><a href="/profile/">ЛИЧНЫЙ КАБИНЕТ</a></li>
-      <li><a href="/about/">О НАС</a></li>
-    </ul>
-  </div>
-
-  <div class="header">
+<div class="header">
     <h1>BMSTU</h1>
     <h2>WebMap</h2>
+    <p>интерактивная карта Бауманки</p>
     <p>Интерактивная карта Бауманки</p>
-  </div>
+</div>
 
-  <div class="container">
+<div class="container">
     <div class="card">
-      <h4>Вход</h4>
-      <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        <div class="input-group">
-          <label for="username">Логин</label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-        </div>
-        <div class="input-group">
-          <label for="password">Пароль</label>
-          <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-        </div>
-        <div class="input-group checkbox-group">
-          <input type="checkbox" id="remember" name="remember" value="1">
-          <label for="remember">Запомнить меня</label>
-        </div>
-        {{ form.errors }}
-        <button type="submit" class="btn btn-primary">Войти</button>
-      </form>
-      <div class="info">
-        <span>Нет аккаунта?</span>
-        <a href="{% url 'register' %}" class="text-decoration-none">Зарегистрироваться</a>
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+        <h4>Вход</h4>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">Логин</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="input-group checkbox-group">
+                <input type="checkbox" id="remember" name="remember" value="1">
+                <label for="remember">Запомнить меня</label>
+            </div>
+            {{ form.errors }}
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+        <div class="info">

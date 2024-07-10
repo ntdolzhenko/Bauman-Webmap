@@ -1,90 +1,74 @@
+@ -1,68 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% load static %}
-  <title>BMSTU WebMap - Регистрация</title>
-  <link rel="stylesheet" href="{% static 'css/register.css' %}">
-  <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <title>BMSTU WebMap - Регистрация</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
 </head>
-
 <body style="background-image: url('{% static 'images/main_page.jpg' %}')">
-
-  <div class="slideheader"></div>
-    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-    <label for="openSidebarMenu" class="sidebarIconToggle">
-      <div class="spinner diagonal part-1"></div>
-      <div class="spinner horizontal"></div>
-      <div class="spinner diagonal part-2"></div>
-    </label>
-  <div id="sidebarMenu">
-    <ul class="sidebarMenuInner">
-      <li><a href="/">ГЛАВНАЯ СТРАНИЦА</a></li>
-      <li><a href="/maps/">КАРТА</a></li>
-      <li><a href="/profile/">ЛИЧНЫЙ КАБИНЕТ</a></li>
-      <li><a href="/about/">О НАС</a></li>
-    </ul>
-  </div>
-
-  <div class="header">
+<div class="header">
     <h1>BMSTU</h1>
     <h2>WebMap</h2>
     <p>Интерактивная карта Бауманки</p>
-  </div>
+</div>
 
-  <div class="container">
+<div class="container">
     <div class="card">
-      <h4>Регистрация</h4>
-      <div class="info">
-        <span>Уже есть аккаунт?</span>
-        <a href="/login/" class="text-decoration-none">Войти</a>
-      </div>
+        <h4>Регистрация</h4>
+        <div class="info">
+            <span>Уже есть аккаунт?</span>
+            <a href="/login/" class="text-decoration-none">Войти</a>
+        </div>
 
-      <form method="post" action="{% url 'register' %}">
-        {% csrf_token %}
-        <div class="input-group">
-          <label for="username">Логин</label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
-        </div>
-        <div class="input-group">
-          <label for="email">Почта</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-        </div>
-        <div class="input-group">
-          <label for="first_name">Имя</label>
-          <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Имя">
-        </div>
-        <div class="input-group">
-          <label for="last_name">Фамилия</label>
-          <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Фамилия">
-        </div>
-        <div class="input-group">
-          <label for="phone">Телефон</label>
-          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Телефон">
-        </div>
-        <div class="input-group">
-          <label for="group">Учебная группа</label>
-          <input type="text" class="form-control" id="group" name="group" placeholder="Учебная группа">
-        </div>
-        <div class="input-group">
-          <label for="password1">Пароль</label>
-          <input type="password" class="form-control" id="password1" name="password1" placeholder="Введите пароль">
-        </div>
-        <div class="input-group">
-          <label for="password2">Повтор пароля</label>
-          <input type="password" class="form-control" id="password2" name="password2" placeholder="Введите пароль еще раз">
-        </div>
-        {{ form.errors }}
-        <div class="input-group checkbox-group">
-          <input type="checkbox" id="terms" name="terms" value="1">
-          <label for="terms">Согласен с условиями</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
-      </form>
-      
+        <form method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <label for="username">Логин</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+            </div>
+            <div class="input-group">
+                <label for="email">Почта</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <label for="fio">ФИО</label>
+                <input type="text" class="form-control" id="fio" name="fio" placeholder="ФИО">
+                <label for="first_name">Имя</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Имя">
+            </div>
+            <div class="input-group">
+                <label for="last_name">Фамилия</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Фамилия">
+            </div>
+            <div class="input-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Телефон">
+            </div>
+            <div class="input-group">
+                <label for="group">Учебная группа</label>
+                <input type="text" class="form-control" id="group" name="group" placeholder="Учебная группа">
+            </div>
+            <div class="input-group">
+                <label for="password1">Пароль</label>
+                <input type="password" class="form-control" id="password1" name="password1" placeholder="Введите пароль">
+            </div>
+            <div class="input-group">
+                <label for="password2">Повтор пароля</label>
+                <input type="password" class="form-control" id="password2" name="password2" placeholder="Введите пароль еще раз">
+            </div>
+            {{ form.errors }}
+            <div class="input-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" value="1">
+                <label for="terms">Согласен с условиями</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+        </form>
+
     </div>
-  </div>
+</div>
 </body>
 </html>
