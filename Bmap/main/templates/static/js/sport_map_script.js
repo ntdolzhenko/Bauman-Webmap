@@ -111,7 +111,7 @@ function init() {
             .find('a')
             .bind('click', function () {
                 if (!placemark.balloon.isOpen()) {
-                    placemark.options.set('preset', group.highlighted_style);
+                    //placemark.options.set('preset', group.highlighted_style);
                     placemark.balloon.open();
                 }
                 else {

@@ -1,0 +1,233 @@
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    font-family: 'Arimo';
+    font-size: 24px;
+    color: #3B332E;
+}
+
+.card span {
+    font-size: 14px;
+    color: #a1aab9;
+}
+
+.stats {
+    background: #f2f5f8;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.info-item {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-item .label {
+    font-size: 14px;
+    color: #3B332E;
+    font-weight: bold;
+    width: 150px;
+}
+
+.info-item .value {
+    font-size: 14px;
+    color: #3B332E;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #3B332E;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #dfe7f1;
+    box-shadow: none;
+    outline: none;
+    height: 40px;
+    background: #f2f5f8;
+}
+
+.button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button .btn {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.button .btn-primary {
+    background-color: #608ab9;
+    border: none;
+}
+
+.button .btn-primary:hover {
+    background-color: #608ab9;
+}
+
+.button .btn-outline-primary {
+    border-color: #608ab9;
+    color: #608ab9;
+}
+
+.button .btn-outline-primary:hover {
+    background-color: #608ab9;
+    color: #fff;
+}
+
+.header {
+    width: 600px;
+    height: 600px;
+    margin-left: 8%;
+}
+
+.header h1 {
+    color: #3B332E;
+    font-size: 150px;
+    font-family: 'Arimo';
+    text-align: left;
+    margin-top: 25%;
+    margin-bottom: 1%;
+}
+
+.header h2 {
+    color: #3B332E;
+    font-size: 100px;
+    font-family: 'Arimo';
+    text-align: left;
+    margin-left: 8%;
+}
+
+.header p {
+    color: #3B332E;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    text-align: left;
+}
+
+.image img {
+    border-radius: 50%;
+}
+
+.ml-2 {
+    margin-left: .5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-2 {
+    margin-bottom: .5rem;
+}
+
+@media (orientation: portrait) {
+
+    html, body {
+        width: 800px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .header {
+        margin-top: -40%;
+        margin-left: 0%;
+    }
+
+    .card {
+        margin-top: 100%;
+        margin-left: -200%;
+    }
+
+    .header h1 {
+        color: #3B332E;
+        font-size: 100px;
+        font-family: 'Arimo';
+        text-align: left;
+        margin-top: 25%;
+        margin-bottom: 1%;
+        margin-left: 5%;
+    }
+
+    .header h2 {
+        color: #3B332E;
+        font-size: 60px;
+        font-family: 'Arimo';
+        text-align: left;
+        margin-left: 15%;
+
+    }
+
+    .header p {
+        color: #3B332E;
+        font-size: 20px;
+        font-family: 'Montserrat';
+        text-align: left;
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 600px) AND (max-width: 1252px) {
+
+    html, body {
+        width: 800px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .header {
+        margin-top: -40%;
+    }
+
+    .card {
+        margin-top: 400%;
+        margin-left: -365%;
+    }
+
+}

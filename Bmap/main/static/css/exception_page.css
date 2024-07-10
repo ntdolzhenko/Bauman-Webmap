@@ -1,0 +1,57 @@
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+{% load static %}
+
+h1 {
+    color: #3B332E;
+    font-size: 300px;
+    font-family: 'Arimo';
+    text-align: center;
+    margin-top:0px;
+    margin-bottom:0px;
+
+}
+
+h2 {
+    color: #3B332E;
+    font-size: 80px;
+    font-family: 'Arimo';
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: -50px;
+}
+
+p {
+    color: #3B332E;
+    font-size: 35px;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom:0px;
+}
+strong {
+    color: #3B332E;
+    font-size: 35px;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom:0px;
+}
+
+.main {
+    height: 520px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+

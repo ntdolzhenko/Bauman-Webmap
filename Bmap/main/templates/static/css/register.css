@@ -1,0 +1,241 @@
+@import "https://fonts.fontstorage.com/import/arimo.css";
+@import "https://fonts.fontstorage.com/import/montserrat.css";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 400px;
+  margin-top: -50px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h4 {
+  margin-bottom: 20px;
+  font-family: 'Arimo';
+  font-size: 30px;
+  color: #608ab9;
+}
+
+.info {
+  margin-bottom: 20px;
+}
+
+.info a {
+  color: #608ab9;
+  text-decoration: none;
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #608ab9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #608ab9;
+}
+
+.btn-primary:hover {
+  background-color: #608ab9;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: #608ab9;
+}
+
+.text-decoration-none:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #3B332E;
+  font-size: 150px;
+  font-family: 'Arimo';
+  text-align: left;
+  margin-left: -5%;
+  margin-top: 10%;
+  margin-bottom: -10%;
+}
+
+h2 {
+  color: #3B332E;
+  font-size: 100px;
+  font-family: 'Arimo';
+  text-align: left;
+  margin-left: 3%;
+  margin-bottom: -1%;
+}
+
+p {
+  color: #3B332E;
+  font-size: 35px;
+  font-family: 'Montserrat';
+  text-align: left;
+  margin-left: -10%;
+}
+
+.header {
+  height: 550px;
+}
+
+@media (orientation: portrait) {
+
+    html, body {
+        width: 800px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .header {
+        margin-top: -40%;
+        margin-left: -20%;
+        margin-bottom: 10%;
+    }
+
+    .container {
+        width: 200px;
+        margin-left: 13%;
+    }
+
+    .card {
+        margin-top: 350%;
+        margin-left: -200%;
+        width: 200px;
+    }
+
+    .header h1 {
+        color: #3B332E;
+        font-size: 100px;
+        font-family: 'Arimo';
+        text-align: left;
+        margin-top: 25%;
+        margin-bottom: -15%;
+        margin-left: 5%;
+    }
+
+    .header h2 {
+        color: #3B332E;
+        font-size: 60px;
+        font-family: 'Arimo';
+        text-align: left;
+        margin-left: 17%;
+
+    }
+
+    .header p {
+        color: #3B332E;
+        font-size: 20px;
+        font-family: 'Montserrat';
+        text-align: left;
+        margin-left: 5%;
+    }
+}
+
+@media (min-width: 600px) AND (max-width: 1252px) {
+
+    html, body {
+        width: 1000px;
+        padding: 10px;
+        margin: 0;
+        height: 1000px;
+    }
+
+    .header {
+        margin-top: -30%;
+        margin-left: 20%;
+    }
+
+    .container {
+        width: 600px;
+        margin-left: -5%;
+        margin-top: 70%;
+    }
+
+    .card {
+        margin-top: 30%;
+        margin-left: -80%;
+        width: 600px;
+    }
+
+    .header h1 {
+        color: #3B332E;
+        font-size: 130px;
+        font-family: 'Arimo';
+        margin-bottom: -13%;
+        margin-left: -2%;
+    }
+
+    .header h2 {
+        color: #3B332E;
+        font-size: 85px;
+        font-family: 'Arimo';
+        text-align: left;
+        margin-left: 9%;
+        margin-bottom: 0%;
+    }
+
+    .header p {
+        color: #3B332E;
+        font-size: 30px;
+        font-family: 'Montserrat';
+        margin-left: -8%;
+    }
+
+}
