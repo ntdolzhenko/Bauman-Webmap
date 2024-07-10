@@ -11,6 +11,7 @@ body {
     .container {
         width: 1400px;
         height: 600px;
+        margin-top: -3%;
     }
 
     .header {
@@ -23,6 +24,6 @@ body {
     color: #3B332E;
     font-size: 100px;
     font-family: 'Arimo';
-    margin-top: 3%;
     margin-left: 8%;
+    padding-top: 2%;
 }

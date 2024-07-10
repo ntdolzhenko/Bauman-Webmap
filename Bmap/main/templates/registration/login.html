@@ -7,11 +7,29 @@
   {% load static %}
   <title>BMSTU WebMap - Login</title>
   <link rel="stylesheet" href="{% static 'css/login.css' %}">
+  <link rel="stylesheet" href="{% static 'css/slidebar.css'%}">
 </head>
 <body style="background-image: url('{% static 'images/main_page.jpg' %}')">
+
+  <div class="slideheader"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a href="/">ГЛАВНАЯ СТРАНИЦА</a></li>
+      <li><a href="/maps/">КАРТА</a></li>
+      <li><a href="/profile/">ЛИЧНЫЙ КАБИНЕТ</a></li>
+      <li><a href="/about/">О НАС</a></li>
+    </ul>
+  </div>
+
   <div class="header">
     <h1>BMSTU</h1>
-    <h2>WebMap</h2>
+    <h2>Web Map</h2>
     <p>интерактивная карта Бауманки</p>
   </div>
 
