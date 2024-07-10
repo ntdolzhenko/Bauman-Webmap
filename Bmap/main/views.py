@@ -58,7 +58,7 @@ def home_view(request):
 def about_view(request):
     return render(request, 'main/about.html')
 def mainBuild_map_view(request):
-    context = get_points_data("Основные учебные корпуса")
+    context = get_points_data("test")
     return render(request, 'maps/main_buildings_map.html', context)
 def branches_map_view(request):
     context = get_points_data("Филиалы МГТУ им. Н.Э. Баумана")

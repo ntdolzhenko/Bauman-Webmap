@@ -5,14 +5,15 @@
 
 <head>
     <title>BMSTU WebMap</title>
-    <link rel="stylesheet" href="{% static 'css/main_page.css'%}">
+    <link rel="stylesheet" href="{% static 'css/home.css'%}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body style="background-image: url('{% static 'images/main_page.jpg' %}')">
 
         <div class="slideheader"></div>
             <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
-            <label for="openSidebarMenu" class="sidebarIconToggle">
+            <label for="openSidebarMenu" class="sidebarIconToggle" style="position: fixed">
                 <div class="spinner diagonal part-1"></div>
                 <div class="spinner horizontal"></div>
                 <div class="spinner diagonal part-2"></div>
